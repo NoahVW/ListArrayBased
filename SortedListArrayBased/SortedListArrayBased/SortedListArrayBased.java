@@ -49,6 +49,7 @@ public class SortedListArrayBased extends ListArrayBased
     public int locateIndexToAdd(Object item)
 	{
 		// TO BE IMPLEMENTED BY YOU
+		return 0;
 	}
 
   	public int locateIndexToRemove(Object item)
@@ -56,6 +57,7 @@ public class SortedListArrayBased extends ListArrayBased
   	// Otherwise, it returns -1.
   	{
 		// TO BE IMPLEMENTED BY YOU
+		return 0;
 	}
 
 }  // end SortedListArrayBased
