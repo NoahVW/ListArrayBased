@@ -3,7 +3,7 @@ import sys
 
 def doargs(args):
     if args[1]=="-h":
-        print("Usage: \n compileRun.py -h lists this menu\ncompileRun.py -wR path/to/folder Compile but does not run\ncompileRun.py path/to/folder -R filename Commit, compile and run")
+        print("Usage: \ncompileRun.py -h lists this menu\ncompileRun.py -wR path/to/folder Compile but does not run\ncompileRun.py path/to/folder -R filename Commit, compile and run")
         sys.exit(0)
     elif args[1]=="-wR":
         #Compile but do not run
