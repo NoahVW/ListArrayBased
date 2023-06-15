@@ -14,7 +14,8 @@ def doargs(args):
         #print(dircontent)
         for item in dircontent:
             if item.endswith(".java"):
-                print(item)
+                #print(item)
+                print(f"javac {args[2]}\\{item}")
                 os.system(f"javac {args[2]}\\{item}")
         print("Compilation completed successfully")
         input("Press Enter to close...")
