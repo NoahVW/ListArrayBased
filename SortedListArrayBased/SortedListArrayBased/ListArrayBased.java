@@ -20,7 +20,15 @@ public class ListArrayBased implements ListInterface {
 
   public int size() {
     // TO BE IMPLEMENTED (or CORRECTED) BY YOU
-    return 0;
+    int i;
+    for(i=0; i<MAX_LIST; i++){
+      try{
+        Object item=items[i];
+      }catch(ArrayIndexOutOfBoundsException e){
+        break;
+      }
+    }
+    return i-1;
   }  // end size
 
   public void removeAll() {
