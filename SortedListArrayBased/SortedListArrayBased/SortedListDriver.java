@@ -13,7 +13,7 @@ public class SortedListDriver
   public static void main(String [] args)
   {
 	SortedListArrayBased myGroceryList = new SortedListArrayBased();
-
+	/* 
 	myGroceryList.add("milk");
 	myGroceryList.add("eggs");
 	myGroceryList.add("butter");
@@ -25,16 +25,17 @@ public class SortedListDriver
 	myGroceryList.add("rice");
 	myGroceryList.add("sausage");
 	myGroceryList.add("flour");
-
-	printList(myGroceryList); //print out original List
+	*/
+	System.out.println(myGroceryList.size());
+	//printList(myGroceryList); //print out original List
 	System.out.print("numItems is now: " + myGroceryList.size() + "\n\n");
-
+	/* 
 	adding(myGroceryList, "juice");
 	removing(myGroceryList, "juice");
 	adding(myGroceryList, "banana");
 	removing(myGroceryList, "sausage");
 	removing(myGroceryList, "cheese");
-
+	*/
 	System.out.println("main(String[] args) is called...");
   }
 
@@ -95,7 +96,7 @@ public class SortedListDriver
   }
 
 */
-
+/* 
   public static void adding(SortedListArrayBased myList, String str)
   {
     System.out.println("Adding " + str + " ...");
@@ -120,5 +121,5 @@ public class SortedListDriver
 	  System.out.printf("%2d. %s\n",index, (String) myList.get(index));
     }
   }
-
+*/
 }
