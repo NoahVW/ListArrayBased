@@ -7,9 +7,9 @@ def doargs(args):
         sys.exit(0)
     elif args[1]=="-wR":
         #Compile but do not run
-        print('wr')
+        #print('wr')
         dircontent=os.listdir(args[2])
-        os.system(f"cd .. && git add -A && git commit -m \"Updated From Script\"")
+        os.system(f"git add -A && git commit -m \"Updated From Script\"")
         os.system("git push")
         for item in dircontent:
             if item.endswith(".java"):
@@ -19,7 +19,7 @@ def doargs(args):
         sys.exit(0)
     elif args[2] =='-R':
         #Compile and Run
-        print('r')
+        #print('r')
         dircontent=os.listdir(args[1])
         os.system(f"git add -A && git commit -m \"Updated From Script\"")
         os.system("git push")
