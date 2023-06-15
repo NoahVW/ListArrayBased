@@ -11,9 +11,10 @@ def doargs(args):
         dircontent=os.listdir(args[2])
         os.system(f"git add -A && git commit -m \"Updated From Script\"")
         os.system("git push")
-        print(dircontent)
+        #print(dircontent)
         for item in dircontent:
             if item.endswith(".java"):
+                print(item)
                 os.system(f"javac {args[2]}\\{item}")
         print("Compilation completed successfully")
         input("Press Enter to close...")
