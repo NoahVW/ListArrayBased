@@ -9,33 +9,26 @@ public class ListArrayBased implements ListInterface {
   private int numItems;  // number of items in list
 
   public ListArrayBased() {
-    // TO BE IMPLEMENTED (or CORRECTED) BY YOU
-    
+    items = new Object[MAX_LIST];
+    numItems = 0;    
   }  // end default constructor
 
   public boolean isEmpty() {
     // TO BE IMPLEMENTED (or CORRECTED) BY YOU
-    return false;
+    return (numItems==0);
   } // end isEmpty
 
   public int size() {
     // TO BE IMPLEMENTED (or CORRECTED) BY YOU
-    int i;
-    for(i=0; i<MAX_LIST; i++){
-      try{
-        Object item=items[i];
-      }catch(ArrayIndexOutOfBoundsException e){
-        break;
-      }
-    }
-    return i-1;
+    return numItems;
   }  // end size
 
   public void removeAll() {
     // Creates a new array; marks old array for
     // garbage collection.
     // TO BE IMPLEMENTED (or CORRECTED) BY YOU
-
+      items = new Object[MAX_LIST];
+      numItems = 0;
   } // end removeAll
 
   public void add(int index, Object item)
@@ -49,7 +42,7 @@ public class ListArrayBased implements ListInterface {
       // list (no shift if index == numItems)
       for (int pos = numItems-1; pos >= index; pos--) {
     	// TO BE IMPLEMENTED (or CORRECTED) BY YOU
-
+            items[pos + 1] = items[pos];
       } // end for
       // insert new item
       items[index] = item;
@@ -65,7 +58,7 @@ public class ListArrayBased implements ListInterface {
                     throws ListIndexOutOfBoundsException {
     if (index >= 0 && index < numItems) {
 	   // TO BE IMPLEMENTED (or CORRECTED) BY YOU
-      return null;
+      return items[index];
     }
     else  {  // index out of range
       throw new ListIndexOutOfBoundsException(
@@ -81,6 +74,7 @@ public class ListArrayBased implements ListInterface {
       // (no shift if index == size)
       for (int pos = index+1; pos < size(); pos++) {
     	 // TO BE IMPLEMENTED (or CORRECTED) BY YOU
+          items[pos-1] = items[pos];
       }  // end for
       numItems--;
     }
