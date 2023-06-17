@@ -8,6 +8,8 @@ public class ListArrayBased implements ListInterface {
   private Object items[];  // an array of list items
   private int numItems;  // number of items in list
 
+//test
+
   public ListArrayBased() {
     items = new Object[MAX_LIST];
     numItems = 0;    
