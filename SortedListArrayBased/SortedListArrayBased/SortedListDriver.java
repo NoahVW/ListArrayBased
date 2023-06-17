@@ -37,6 +37,8 @@ public class SortedListDriver
 	removing(myGroceryList, "cheese");
 	*/
 	System.out.println("main(String[] args) is called...");
+
+	System.exit(0);
   }
 
 /*
