@@ -15,6 +15,7 @@ public class SortedListArrayBased extends ListArrayBased
   	// creates an empty list
   	{
 		// TO BE IMPLEMENTED BY YOU
+		super();
   	}// end default constructor
 
   	public void add(Object item) throws ListException
@@ -23,7 +24,8 @@ public class SortedListArrayBased extends ListArrayBased
   	{
 		try
 		{
-			// TO BE IMPLEMENTED BY YOU
+			int addIndex = locateIndexToAdd(item);
+			super.add(addIndex, item);	
 		}
 		catch(Exception e)
 		{
@@ -39,6 +41,8 @@ public class SortedListArrayBased extends ListArrayBased
 		try
 		{
 			// TO BE IMPLEMENTED BY YOU
+			int removeIndex = locateIndexToRemove(item);
+			super.remove(removeIndex);
 		}
 		catch(Exception e)
 		{
@@ -48,7 +52,9 @@ public class SortedListArrayBased extends ListArrayBased
 
     public int locateIndexToAdd(Object item)
 	{
-		// TO BE IMPLEMENTED BY YOU
+		for (int i = 0; i < size(); i++)
+			if (get(i).toString().compareTo(item.toString())>0)
+			return i;
 		return 0;
 	}
 
@@ -56,10 +62,12 @@ public class SortedListArrayBased extends ListArrayBased
   	// Returns the position where the item belongs or exists in a sorted list;
   	// Otherwise, it returns -1.
   	{
-		// TO BE IMPLEMENTED BY YOU
-		return 0;
+		for (int i = 0; i < size(); i++){
+				if (item.toString().compareTo(get(i).toString()) == 0)
+			return i;
+			}
+		return -1;
 	}
-
-}  // end SortedListArrayBased
+}	  // end SortedListArrayBased
 
 
